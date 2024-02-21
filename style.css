@@ -2,6 +2,11 @@ body {
   background-color: black;
   color: white;
   font-family: inter;
+  position: relative;
+
+  background-image: url('img/Body_Background.png');
+  background-size: cover;
+  background-repeat: repeat-y;
 }
 
 .container {
@@ -9,7 +14,6 @@ body {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
 }
 
 .h2-text {
@@ -60,7 +64,6 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   padding-top: 30px;
-  position: relative;
 }
 
 .nav {
@@ -85,12 +88,12 @@ body {
 }
 
 .nav__links__item {
-  margin-right: 20px;
-  /* font-size: 20px; */
   font-weight: bold;
   list-style: none;
 }
-
+.nav__links__item:not(:last-child) {
+  margin-right: 20px;
+}
 .nav__links__link {
   color: white;
   text-decoration: none;
@@ -131,15 +134,10 @@ body {
 }
 
 .main-page__phone__image {
-  position: relative;
   bottom: 0;
 }
 
 .main {
-  background-image: url('img/Body_Background.png');
-  background-size: cover;
-  background-repeat: repeat-y;
-  background-position: 0 -40px;
 }
 
 .about__container {
@@ -258,4 +256,87 @@ body {
   font-style: italic;
   margin-top: 100px;
   color: #aaaaaa;
+}
+
+.reviews__numbers {
+  display: flex;
+  justify-content: space-around;
+}
+.reviews__numbers__card {
+  margin-top: 50px;
+}
+
+.reviews__numbers__number {
+  font-size: 64px;
+  font-weight: bold;
+  margin: 0;
+}
+.reviews__numbers__description {
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+.reviews__cards {
+  margin: auto;
+  position: absolute;
+  display: flex;
+  /* min-width: 100vw; */
+  justify-content: center;
+  margin-top: 100px;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+}
+
+.reviews__cards__card {
+  max-width: 800px;
+  min-width: 800px;
+  padding: 50px;
+  margin-right: 50px;
+}
+
+.reviews__cards__card__header {
+  font-size: 36px;
+  font-style: italic;
+  margin: 0;
+}
+
+.reviews__cards__card__user {
+  display: flex;
+  align-items: center;
+  margin-top: 68px;
+}
+
+.reviews__cards__card__user__photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+.reviews__cards__card__user__name {
+  font-size: 24px;
+  margin: 0;
+}
+.reviews__cards__card__user__description {
+  font-size: 20px;
+  color: #aaaaaa;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.blur {
+  position: absolute;
+  z-index: 5;
+}
+
+.blur-left {
+  left: 0;
+}
+
+.blur-right {
+  right: 0;
+}
+
+.test {
+  margin-top: 800px;
 }
